@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link rel="stylesheet" href="style.css">
+  <script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+  defer
+></script>
 </head>
 <body>
   <div class="login-container">
@@ -25,7 +29,8 @@
       <input type="checkbox" id="showPassword" onclick="togglePassword()">
       <label for="showPassword">Show Password</label>
     </div>
-
+<div id="mywidget">
+  </div>
     <button class="btn" onclick="validateLogin()">SignIn</button>
     <div class="message" id="loginMessage"></div>
   </div>

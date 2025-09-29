@@ -38,3 +38,17 @@ function togglePassword() {
   let passwordField = document.getElementById("password");
   passwordField.type = passwordField.type === "password" ? "text" : "password";
 }
+
+window.onload = function () {
+        turnstile.render("#mywidget", {
+          sitekey: "0x4AAAAAAB38t7ODumPZJCL2",
+          callback: function (token) {
+            console.log("Turnstile token:", token);
+            // Handle successful verification
+          },
+          "error-callback": function (errorCode) {
+            console.error("Turnstile error:", errorCode);
+          },
+        });
+      };
+
